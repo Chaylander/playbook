@@ -16,3 +16,5 @@ charmander.sayMessage("Heey!")
 
 squirtle.sayHello()
 squirtle.sayMessage("Heey!")
+
+//Exportar una clase usando commonJS
