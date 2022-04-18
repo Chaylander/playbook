@@ -9,6 +9,7 @@ class Pokemon {
 
     sayMessage(message) {
         console.log(`Mi pokémon ${this.name} dice: ${message}`)
+        console.log("Mi pokémon " + this.name + " dice: " + message) //Otra manera de usar variables dentro de strings
     }
 }
 
