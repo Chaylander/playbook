@@ -32,6 +32,10 @@ class User {
         this.username = newUsername;
     }
 
+    setBio(newBio){
+        this.bio = newBio;
+    }
+
 
 }
 
