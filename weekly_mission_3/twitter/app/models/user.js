@@ -8,6 +8,27 @@ class User {
         this.lastUpdated = new Date();
     }
 
+    getUsername(){
+        return this.username;
+    }
+
+    getBio(){
+        return this.bio;
+    }
+
+    getName(){
+        return this.name;
+    }
+
+    getLastUpdated(){
+        return this.lastUpdated;
+    }
+
+    getDateCreated(){
+        return this.dateCreated;
+    }
+
+
 }
 
 module.exports = User;

@@ -16,4 +16,14 @@ describe("Test para user", () => {
         expect(user.lastUpdated).not.toBeUndefined();//No debe ser indefinido
 
     })
+
+    test("Requerimiento 3: Agregando los getters", () => {
+        const user = new User (1, "chaylander", "Roberto Jauregui", "Bio");        
+        expect(user.getUsername()).toBe("chaylander");
+        expect(user.getBio()).toBe("Bio");
+        expect(user.getName()).toBe("Roberto Jauregui");
+        expect(user.getDateCreated()).not.toBeUndefined();
+        expect(user.getLastUpdated()).not.toBeUndefined();
+    })
+
 })
