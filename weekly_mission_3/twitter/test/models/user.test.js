@@ -26,4 +26,10 @@ describe("Test para user", () => {
         expect(user.getLastUpdated()).not.toBeUndefined();
     })
 
+    test("Requerimiento 4: Agregando los setters", () => {
+        const user = new User (1, "chaylander", "Roberto Jauregui", "Bio");
+        user.setUsername = "chay";
+        expect(user.setUsername).toBe("chay");
+        
+    })
 })

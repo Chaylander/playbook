@@ -28,6 +28,10 @@ class User {
         return this.dateCreated;
     }
 
+    setUsername(newUsername){
+        this.username = newUsername;
+    }
+
 
 }
 
