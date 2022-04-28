@@ -18,7 +18,12 @@ app.get('/launchx', (req, res) => {
     res.send("Bienvenidos a LaunchX!");
 })
 
-
+//Agregar una nueva ruta y regresar un objeto
+app.get('/explorersInNode', (req, res) => {
+    const explorer1 = {name : "Explorer", msg : "Hello!!"};
+    const explorer2 = {name : "Explorer2", msg : "Hello!!"};
+    res.send([explorer1, explorer2]);
+})
 
 
 //con esto iniciamos el servidor
