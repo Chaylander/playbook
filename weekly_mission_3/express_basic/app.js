@@ -25,6 +25,14 @@ app.get('/explorersInNode', (req, res) => {
     res.send([explorer1, explorer2]);
 })
 
+//Nueva ruta que recibe Query Parameters: Recibir parametros por URL
+//localhost:3000/explorers/Chay
+//req.params = {"explorerName":"Chay"}
+app.get('/explorers/:explorerName', (req,res) => {
+    res.send(req.params)
+})
+
+
 
 //con esto iniciamos el servidor
 app.listen(port, () => {
