@@ -25,3 +25,20 @@ app.get('/v1/explorers', (req, res) => {
     res.status(200).json(explorers)
 
 })
+
+//GET BY ID
+app.get('/v1/explorers/:id', (req, res) => {
+    console.log("GET BY ID  explorers V1 API " + new Date())
+    const explorer1 = {id: 1, name: "Explorer1"}
+    //200 = OK
+    res.status(200).json(explorer1)
+})
+
+//POST (CREATE NEW)
+//el codigo 201 significa que se ha creado una nueva entidad
+app.post('/v1/explorers/', (req, res) => {
+    console.log("API explorers POST request " + new Date());
+    const requestBody = req.body; // parametros del request
+    console.log(req.body)
+    res.status(201).json({message: "Creado exitosamente"});
+})  
