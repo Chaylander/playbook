@@ -53,3 +53,12 @@ app.put('/v1/explorers/:id', (req, res) => {
     console.log(req.params.id)// query params
     res.status(200).json({message: "Actualizado exitosamente"});
 })
+
+//DELETE
+app.delete('/v1/explorers/:id', (req, res) => {
+    console.log('API explorers DELETE request ' + new Date())
+    console.log("Delete explorer with id " + req.params.id)
+    const requestBody = req.body; // parametros dee un cliente
+    res.status(200).json({message: "Eliminado exitosamente"});
+
+})
