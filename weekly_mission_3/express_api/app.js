@@ -14,7 +14,7 @@ app.listen(port, () => {
 //rutas
 //ESTO ES UN ENDPOINT
 //metodos http get, post, put, delete
-//GET
+//GET (obtener datos)
 app.get('/v1/explorers', (req, res) => {
     console.log("API Explorers GET all request " + new Date())
     const explorer1 = {id: 1, name: "Explorer1"}
@@ -42,3 +42,14 @@ app.post('/v1/explorers/', (req, res) => {
     console.log(req.body)
     res.status(201).json({message: "Creado exitosamente"});
 })  
+
+//PUT (UPDATE)
+//puede regresar un 201, pero el correcto es el 200
+app.put('/v1/explorers/:id', (req, res) => {
+    console.log('API explorers PUT request ' + new Date())
+    console.log("Update explorer with id " + req.params.id)
+    const requestBody = req.body; // parametros para actualizar
+    console.log(req.body)
+    console.log(req.params.id)// query params
+    res.status(200).json({message: "Actualizado exitosamente"});
+})
